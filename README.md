@@ -44,18 +44,9 @@
 
 ## 安装说明
 
-### 方法一：直接运行
 1. 下载最新版本的 ZIP 包
 2. 解压到任意目录
 3. 运行 `MailConvertPrivateUser.exe`
-
-### 方法二：源代码编译
-```bash
-git clone https://github.com/your-repo/LiteEMLTOPST.git
-cd LiteEMLTOPST
-dotnet build src/MailConvertPrivateUser/MailConvertPrivateUser.csproj -c Release
-dotnet publish src/MailConvertPrivateUser/MailConvertPrivateUser.csproj -c Release -o ./publish
-```
 
 ## 使用指南
 
@@ -168,24 +159,37 @@ A: 请检查：
 - 密码是否使用授权码而非登录密码
 - 网络能否访问邮箱服务器
 
-## 版本历史
+### Q: 如何获得软件订阅？
+A: 请访问 [https://www.booming.one](https://www.booming.one) 了解订阅详情。
 
-### v1.0.0 (2024)
-- 初始版本发布
-- 支持 EML 转 PST 转换
-- 支持 IMAP 邮件收取
-- 支持 PST/OST 文件提取
-- 支持多种归类模式
+### Q: 试用期满后还能继续使用吗？
+A: 试用期结束后需要订阅才能继续使用。请在试用期结束前通过官网续费。
+
+## 关于订阅模式
+
+LiteEMLTOPST 是一款商业化邮件转换工具。
+
+### 注册与订阅流程
+
+1. **注册软件**：下载安装后，输入邮箱进行注册
+2. **免费试用**：注册成功后自动获得 **30 天试用版**
+3. **订阅续费**：试用期结束后，通过以下方式订阅：
+   - 网站：[https://www.booming.one](https://www.booming.one)
+   - 续费后获得正式授权
+
+### 订阅权益
+- 持续功能更新
+- 技术支持服务
+- 优先体验新功能
 
 ## 许可证
 
-MIT License
+本文档仅供已订阅用户内部使用。
 
 ## 联系方式
 
-- 邮箱：raymond.xu@booming.one
-- 问题反馈：[GitHub Issues](https://github.com/your-repo/LiteEMLTOPST/issues)
+- 商务合作：raymond.xu@booming.one
 
 ---
 
-如遇问题，欢迎提交 Issue 或通过邮箱联系。
+如有任何问题或建议，欢迎通过邮箱联系。
