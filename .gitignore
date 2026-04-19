@@ -1,0 +1,24 @@
+# Source code
+src/
+tests/
+
+# Build output
+publish/
+bin/
+obj/
+
+# Logs
+logs/
+
+# IDE
+.claude/
+
+# Solution file (not needed in repo)
+*.sln
+
+# ZIP releases
+*.zip
+
+# Temporary files
+*.tmp
+*~
