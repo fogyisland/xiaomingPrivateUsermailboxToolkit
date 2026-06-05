@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Common_OK">确定</string>
+  <string name="Common_Cancel">取消</string>
+  <!-- All keys from docs/superpowers/translations/keys.csv will be added in Task 3 -->
+</resources>
