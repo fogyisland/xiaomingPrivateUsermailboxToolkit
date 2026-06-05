@@ -124,4 +124,44 @@ public class LocalizationManagerTests : IDisposable
         Assert.Contains(langs, l => l.Code == "zh-CN");
         Assert.Contains(langs, l => l.Code == "en-US");
     }
+
+    [Fact]
+    public void GetString_ReturnsEmptyString_WhenKeyIsNullOrEmpty()
+    {
+        Assert.Equal(string.Empty, LocalizationManager.GetString(null!));
+        Assert.Equal(string.Empty, LocalizationManager.GetString(string.Empty));
+    }
+
+    [Fact]
+    public void GetString_SupportsMultipleFormatPlaceholders()
+    {
+        WriteXml("zh-cn.xml", "<?xml version=\"1.0\"?><resources><string name=\"WelcomeMulti\">欢迎 {0}，你有 {1} 封邮件</string></resources>");
+        WriteXml("en-us.xml", "<?xml version=\"1.0\"?><resources><string name=\"WelcomeMulti\">Welcome {0}, you have {1} messages</string></resources>");
+
+        LocalizationManager.Initialize("en-US");
+
+        Assert.Equal("Welcome Alice, you have 3 messages", LocalizationManager.GetString("WelcomeMulti", "Alice", 3));
+    }
+
+    [Fact]
+    public void GetString_ReturnsTemplateVerbatim_WhenNoArgsProvidedOnTemplatedKey()
+    {
+        WriteXml("zh-cn.xml", "<?xml version=\"1.0\"?><resources><string name=\"Welcome\">欢迎 {0}</string></resources>");
+        WriteXml("en-us.xml", "<?xml version=\"1.0\"?><resources><string name=\"Welcome\">Welcome {0}</string></resources>");
+
+        LocalizationManager.Initialize("en-US");
+
+        // No args passed — should return template as-is, not throw
+        Assert.Equal("Welcome {0}", LocalizationManager.GetString("Welcome"));
+    }
+
+    [Fact]
+    public void Initialize_FallsBackToZhCN_WhenCultureIsUnsupported()
+    {
+        WriteXml("zh-cn.xml", "<?xml version=\"1.0\"?><resources><string name=\"Greeting\">你好</string></resources>");
+
+        LocalizationManager.Initialize("fr-FR");
+        Assert.Equal("zh-CN", LocalizationManager.CurrentLanguage);
+        Assert.Equal("你好", LocalizationManager.GetString("Greeting"));
+    }
 }
