@@ -1,0 +1,163 @@
+key,zh-CN,en-US
+Common_OK,确定,OK
+Common_Cancel,取消,Cancel
+Common_Save,保存,Save
+Common_Browse,浏览,Browse
+Common_Add,添加,Add
+Common_Edit,编辑,Edit
+Common_Delete,删除,Delete
+Common_Error,错误,Error
+Common_Success,成功,Success
+Common_Warning,警告,Warning
+Common_Yes,是,Yes
+Common_No,否,No
+Common_Close,关闭,Close
+Common_Name,名称,Name
+Common_Server,服务器,Server
+Common_Port,端口,Port
+Common_Email,邮箱,Email
+Common_Password,密码,Password
+Common_Username,用户名,Username
+
+App_StartupError,错误: {0},Error: {0}
+
+Preferences_Title,常规设置,Preferences
+Preferences_Tab_EmlToPst,📧 EML转PST,📧 EML to PST
+Preferences_Tab_EmlSplit,📅 EML日期分割,📅 EML Date Split
+Preferences_Tab_Imap,☁️ IMAP,☁️ IMAP
+Preferences_Tab_O365,🔄 O365,🔄 O365
+Preferences_Tab_Language,🌐 语言,🌐 Language
+Preferences_Group_EmlToPst,EML转PST 默认路径设置,EML to PST Default Path Settings
+Preferences_Group_EmlToPstDesc,设置转换功能默认使用的目录路径,Set the default directory paths used by the conversion feature
+Preferences_Group_EmlSplit,EML日期分割 默认路径设置,EML Date Split Default Path Settings
+Preferences_Group_EmlSplitDesc,设置日期分割功能默认使用的目录路径,Set the default directory paths used by the date split feature
+Preferences_Group_Imap,IMAP 服务器账户列表,IMAP Server Account List
+Preferences_Group_O365,Office 365 账户列表,Office 365 Account List
+Preferences_Group_O365Desc,配置 Azure AD 应用凭证以连接 Microsoft Graph API,Configure Azure AD app credentials to connect to Microsoft Graph API
+Preferences_Field_EmlDir,EML 目录,EML Directory
+Preferences_Field_PstOutput,PST 输出,PST Output
+Preferences_Field_DateBefore,日期之前,Date Before
+Preferences_Field_DateAfter,日期之后,Date After
+Preferences_Language_Prompt,请选择界面语言,Select interface language
+Preferences_Language_RestartPrompt,语言已切换为 {0}，请重启应用后生效。,Language switched to {0}. Please restart the application to take effect.
+Preferences_SaveSuccess,设置已保存！,Settings saved!
+Preferences_SaveSuccessTitle,保存设置,Save Settings
+Preferences_SaveFailed,保存设置失败: {0},Failed to save settings: {0}
+
+ImapEdit_Title,编辑 IMAP 账户,Edit IMAP Account
+ImapEdit_Group,IMAP 账户设置,IMAP Account Settings
+ImapEdit_Field_UseSsl,使用 SSL,Use SSL
+
+O365Edit_Title,编辑 O365 账户,Edit O365 Account
+O365Edit_Group,O365 账户设置,O365 Account Settings
+O365Edit_GroupDesc,配置 Azure AD 应用凭证以连接 Microsoft Graph API,Configure Azure AD app credentials to connect to Microsoft Graph API
+O365Edit_Field_Name,配置名称,Configuration Name
+O365Edit_Field_NameDesc,用于标识此配置的友好名称,A friendly name to identify this configuration
+O365Edit_Field_TenantId,Tenant ID,Tenant ID
+O365Edit_Field_TenantIdDesc,Azure AD 租户 ID，可在 Azure Portal - Azure Active Directory - 概述中查看,Azure AD tenant ID, found in Azure Portal > Azure Active Directory > Overview
+O365Edit_Field_ClientId,Client ID,Client ID
+O365Edit_Field_ClientIdDesc,应用程序（客户端）ID，注册 Azure AD 应用后获取,Application (client) ID, obtained after registering the Azure AD app
+O365Edit_Field_Username,用户名（可选）,Username (Optional)
+O365Edit_Field_UsernameDesc,连接时使用的用户名，通常为管理员邮箱,Username used for connection, usually the admin email
+
+ContactMapping_Title,字段映射配置,Field Mapping Configuration
+ContactMapping_Header,请将源文件字段映射到目标字段：,Please map source file fields to target fields:
+ContactMapping_StartConvert,开始转换,Start Convert
+
+Reg_Title,注册与激活,Registration and Activation
+Reg_Header,软件使用注册,Software Registration
+Reg_Status_Current,当前状态: ,Current Status:
+Reg_Status_Trial,试用版,Trial Version
+Reg_Status_Detecting,检测中...,Detecting...
+Reg_RegPanelTitle,测试版授权信息,Test Version License Information
+Reg_Field_UserName,用户姓名:,User Name:
+Reg_Field_UserEmail,用户邮箱:,User Email:
+Reg_Field_Org,组织/公司:,Organization/Company:
+Reg_Field_RegDate,注册日期:,Registration Date:
+Reg_Field_ExpireDate,到期日期:,Expiration Date:
+Reg_Field_Mac,MAC地址:,MAC Address:
+Reg_RegFormTitle,注册（获得30天试用）,Register (Get 30-Day Trial)
+Reg_RegFormHint,提示：注册后可获得30天免费试用，到期后需激活订阅才能继续使用,Note: Registration grants a 30-day free trial. After expiration, activate a subscription to continue.
+Reg_Field_SoftwareName,软件名称:,Software Name:
+Reg_Field_Version,版本:,Version:
+Reg_Field_ShowMac,显示,Show
+Reg_ActivateTitle,激活订阅版,Activate Subscription
+Reg_ActivateHint,提示：已有授权码？在此输入激活码升级为订阅版（无限期使用）,Note: Already have a license key? Enter it here to upgrade to the subscription version (unlimited use).
+Reg_Field_Serial,授权码:,License Key:
+Reg_Activate,激活,Activate
+Reg_Btn_Register,注册（试用）,Register (Trial)
+Reg_Btn_Unregister,注销授权,Unregister
+Reg_Btn_Close,关闭,Close
+Reg_StatusMessage_InvalidEmail,请输入有效的邮箱地址,Please enter a valid email address
+Reg_StatusMessage_MacNotFound,无法获取 MAC 地址，请重试,Unable to retrieve MAC address, please retry
+Reg_StatusMessage_RegFailed,注册失败: {0},Registration failed: {0}
+Reg_StatusMessage_RegSuccess,注册成功！,Registration successful!
+Reg_StatusMessage_Activated,激活成功！,Activation successful!
+Reg_StatusMessage_ActivateFailed,激活失败: {0},Activation failed: {0}
+Reg_StatusMessage_UnregSuccess,授权已注销,License unregistered
+Reg_StatusMessage_UnregFailed,注销失败: {0},Unregistration failed: {0}
+Reg_StatusMessage_ConfirmUnreg,确定要注销当前授权吗？,Are you sure you want to unregister the current license?
+Reg_TrialRemainingDays,剩余 {0} 天,{0} days remaining
+
+Main_Title,小铭邮件百宝箱（个人版）,LiteEMLTOPST
+Main_Tab_EmlToPst,📧 EML转PST,📧 EML to PST
+Main_Tab_EmlSplit,📅 EML日期分割,📅 EML Date Split
+Main_Tab_Directory,📁 目录分类,📁 Directory Classification
+Main_Tab_Imap,☁️ IMAP,☁️ IMAP
+Main_Tab_O365,🔄 O365,🔄 O365
+Main_Tab_Contacts,👤 联系人,👤 Contacts
+Main_Tab_ImapToPst,🔄 IMAP转PST,🔄 IMAP to PST
+Main_Btn_Preferences,⚙️ 偏好设置,⚙️ Preferences
+Main_Btn_Registration,🔑 注册激活,🔑 Registration
+Main_Btn_StartConvert,开始转换,Start Convert
+Main_Btn_StopConvert,停止转换,Stop Convert
+Main_Btn_Browse,Browse,Browse
+Main_Btn_Convert,转换,Convert
+Main_Btn_Cancel,取消,Cancel
+Main_Btn_AddAccount,添加账户,Add Account
+Main_Btn_DeleteAccount,删除账户,Delete Account
+Main_Btn_Refresh,刷新,Refresh
+Main_Btn_Save,保存,Save
+Main_Group_EmlToPst,EML转PST 设置,EML to PST Settings
+Main_Group_EmlSplit,EML日期分割 设置,EML Date Split Settings
+Main_Group_OutputPst,输出PST设置,Output PST Settings
+Main_Group_ImapAccounts,IMAP 账户,IMAP Accounts
+Main_Group_ImapMailboxes,邮箱列表,Mailbox List
+Main_Group_O365Accounts,O365 账户,O365 Accounts
+Main_Group_Contacts,联系人列表,Contact List
+Main_Group_DirClassify,目录分类规则,Directory Classification Rules
+Main_Field_EmlDir,EML 目录,EML Directory
+Main_Field_PstOutput,PST 输出,PST Output
+Main_Field_PstName,PST 文件名,PST File Name
+Main_Field_DateBefore,日期之前,Date Before
+Main_Field_DateAfter,日期之后,Date After
+Main_Field_Account,账户,Account
+Main_Field_Folder,文件夹,Folder
+Main_Field_OutputDir,输出目录,Output Directory
+Main_Field_FolderTree,保留文件夹结构,Preserve folder structure
+Main_Field_ScanRecursive,递归扫描子目录,Scan subdirectories recursively
+Main_Field_FileFilter,文件扩展名,File extension
+Main_Msg_ConfirmExit,确定要退出吗？,Are you sure you want to exit?
+Main_Msg_ConvertComplete,转换完成！共处理 {0} 封邮件,Conversion complete! Processed {0} emails
+Main_Msg_ConvertFailed,转换失败: {0},Conversion failed: {0}
+Main_Msg_NoEmlFiles,未找到 EML 文件,No EML files found
+Main_Msg_InvalidPath,请选择有效的目录,Please select a valid directory
+Main_Msg_PstWriteFailed,PST 写入失败: {0},Failed to write PST: {0}
+Main_Msg_ConfirmDelete,确定要删除吗？,Are you sure you want to delete?
+Main_Msg_ImapConnectFailed,IMAP 连接失败: {0},IMAP connection failed: {0}
+Main_Msg_O365ConnectFailed,O365 连接失败: {0},O365 connection failed: {0}
+Main_Progress_Converting,正在转换... ({0}/{1}),Converting... ({0}/{1})
+Main_Progress_Splitting,正在分割... ({0}/{1}),Splitting... ({0}/{1})
+Main_Status_Ready,就绪,Ready
+Main_Status_Working,工作中,Working
+Main_Status_Idle,空闲,Idle
+Main_Table_Column_Name,名称,Name
+Main_Table_Column_Server,服务器,Server
+Main_Table_Column_Port,端口,Port
+Main_Table_Column_Email,邮箱,Email
+Main_Table_Column_Folder,文件夹,Folder
+Main_Table_Column_Count,数量,Count
+Main_Table_Column_Status,状态,Status
+Main_Table_Column_Date,日期,Date
+Main_Table_Column_Size,大小,Size
+Main_Table_Column_Action,操作,Action
