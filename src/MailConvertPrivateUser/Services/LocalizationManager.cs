@@ -16,6 +16,8 @@ public static class LocalizationManager
 
     private static readonly Dictionary<string, string> _current = new();
     private static readonly Dictionary<string, string> _fallback = new();
+    private static readonly HashSet<string> _warnedMissingKeys = new();
+    private static readonly HashSet<string> _warnedFormatErrors = new();
     private static string _currentLanguage = FallbackCulture;
     private static string _languageDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Language");
 
@@ -33,10 +35,18 @@ public static class LocalizationManager
     {
         _current.Clear();
         _fallback.Clear();
+        _warnedMissingKeys.Clear();
+        _warnedFormatErrors.Clear();
         _currentLanguage = FallbackCulture;
         _languageDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Language");
     }
 
+    /// <summary>
+    /// Loads localized strings for the given culture. Must be called once on the UI thread
+    /// during app startup, BEFORE any <see cref="GetString(string)"/> call. Not thread-safe;
+    /// not designed for runtime re-init — language changes require app restart.
+    /// </summary>
+    /// <param name="culture">"zh-CN" or "en-US". Other values silently fall back to "zh-CN".</param>
     public static void Initialize(string culture)
     {
         _current.Clear();
@@ -64,7 +74,10 @@ public static class LocalizationManager
         if (string.IsNullOrEmpty(key)) return string.Empty;
         if (_current.TryGetValue(key, out var v)) return v;
         if (_fallback.TryGetValue(key, out v)) return v;
-        Log.Warning("{Context}: missing key {Key} (culture: {Culture})", LogContext, key, _currentLanguage);
+        if (_warnedMissingKeys.Add(key))
+        {
+            Log.Warning("{Context}: missing key {Key} (culture: {Culture})", LogContext, key, _currentLanguage);
+        }
         return $"[{key}]";
     }
 
@@ -76,8 +89,12 @@ public static class LocalizationManager
         {
             return string.Format(template, args);
         }
-        catch (FormatException)
+        catch (FormatException ex)
         {
+            if (_warnedFormatErrors.Add(key))
+            {
+                Log.Error(ex, "{Context}: format mismatch for key {Key} template='{Template}'", LogContext, key, template);
+            }
             return template;
         }
     }
