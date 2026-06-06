@@ -321,3 +321,229 @@ Main_Table_Column_Subject,主题,Subject
 Main_Status_Trial,试用版,Trial
 Main_Log_Title,📋 运行日志,📋 Log Panel
 Main_Btn_SelectFolder,选择目录,Select Folder
+Common_Complete,完成,Complete
+Main_Lbl_Subscription,订阅版,Subscription
+Main_Lbl_SubscriptionRemaining,订阅版 | 剩余 {0} 天,Subscription | {0} days remaining
+Main_Lbl_TrialRemaining,试用版 | 剩余 {0} 天,Trial | {0} days remaining
+Main_Msg_DirNotExist,目录不存在,Directory does not exist
+Main_Lbl_ScanResult,共 {0} 封邮件（将归类 {1} 封，跳过 {2} 封已归类）,"{0} mails total (will classify {1}, skip {2} already classified)"
+Main_Lbl_ScanFailed,扫描失败: {0},Scan failed: {0}
+Main_Lbl_ConvertFailed,转换失败,Conversion failed
+Main_Lbl_ScanningEml,正在扫描 EML 文件...,Scanning EML files...
+Main_Msg_EmlInputDirNotExist,EML 输入目录不存在！,EML input directory does not exist!
+Main_Lbl_FoundEmlFiles,找到 {0} 个 EML 文件，开始转换...,Found {0} EML files, starting conversion...
+Main_Lbl_Converting,正在转换: {0}/{1},Converting: {0}/{1}
+Main_Lbl_Processing,处理中: {0}/{1},Processing: {0}/{1}
+Main_Lbl_ConvertCompleteLabel,完成！已处理 {0} 个文件。,Complete! Processed {0} files.
+Main_Lbl_ConvertCompleteStatus,转换完成: 成功 {0}, 失败 {1},Conversion complete: {0} success, {1} failed
+Main_Msg_ConvertDone,"转换完成！
+成功: {0}, 失败: {1}
+PST 文件已保存到:
+{2}","Conversion complete!
+{0} success, {1} failed
+PST file saved to:
+{2}"
+Main_Msg_SelectSplitDate,请选择分割日期！,Please select a split date!
+Main_Lbl_FoundEmlFilesSplit,找到 {0} 个 EML 文件，开始分割...,Found {0} EML files, starting split...
+Main_FolderType_Sent,已发送,Sent
+Main_FolderType_Inbox,收件箱/其他,Inbox/Other
+Main_Lbl_SplitProgress,处理中: {0}/{1} (日期之前: {2}, 日期之后: {3}),Processing: {0}/{1} (before: {2}, after: {3})
+Main_Lbl_SplitComplete,完成！日期之前: {0} 封, 日期之后: {1} 封,Complete! Before: {0} mails, After: {1} mails
+Main_Msg_SplitComplete,"分割完成！
+
+日期之前: {0} 封邮件
+保存到: {1}
+
+日期之后: {2} 封邮件
+保存到: {3}","Split complete!
+
+Before: {0} mails
+Saved to: {1}
+
+After: {2} mails
+Saved to: {3}"
+Main_Msg_SplitFailed,分割失败: {0},Split failed: {0}
+Main_Dialog_SelectPstFile,选择 PST 文件,Select PST File
+Main_Msg_PstNotExist,PST 文件不存在！,PST file does not exist!
+Main_Lbl_Extracting,正在提取...,Extracting...
+Main_Lbl_Extracted,已提取: {0} 封邮件,Extracted: {0} mails
+Main_Lbl_ExtractComplete,提取完成！,Extraction complete!
+Main_Msg_PstExtractComplete,"提取完成！
+EML 文件已保存到:
+{0}","Extraction complete!
+EML files saved to:
+{0}"
+Main_Msg_PstExtractFailed,提取失败: {0},Extraction failed: {0}
+Main_Lbl_ExtractingContacts,正在提取联系人...,Extracting contacts...
+Main_Lbl_ContactsComplete,提取完成,Extraction complete
+Main_Msg_ContactsExtracted,提取到 {0} 个联系人。,{0} contacts extracted.
+Main_Msg_OperationFailed,失败: {0},Failed: {0}
+Main_Lbl_ExtractingCalendar,正在提取日历...,Extracting calendar...
+Main_Msg_CalendarExtracted,提取到 {0} 个日历事件。,{0} calendar events extracted.
+Main_Lbl_ScanningPst,正在扫描 PST 文件夹...,Scanning PST folders...
+Main_Lbl_ClassifyComplete,归类完成！,Classification complete!
+Main_Msg_PstClassifyComplete,PST 文件归类完成！,PST file classification complete!
+Main_Msg_ClassifyFailed,归类失败: {0},Classification failed: {0}
+Main_Lbl_Classifying,归类中: {0}/{1},Classifying: {0}/{1}
+Main_Msg_OstAutoLoaded,OST 文件已经自动加载到 Outlook 中，无需选择文件。,OST files are auto-loaded in Outlook, no need to select a file.
+Main_Msg_SelectOstAccount,请先选择一个 OST 账户！,Please select an OST account first!
+Main_Lbl_ScanningOst,正在扫描 OST 文件夹...,Scanning OST folders...
+Main_Msg_OstClassifyComplete,OST 文件归类完成！,OST file classification complete!
+Main_Msg_SelectOutputDir,请选择输出目录！,Please select an output directory!
+Main_Lbl_CountingMails,正在统计邮件数量...,Counting mails...
+Main_Lbl_OstExtractedTotal,已提取: {0}/{1} 封邮件,Extracted: {0}/{1} mails
+Main_Lbl_OstExtracted,已提取: {0} 封邮件,Extracted: {0} mails
+Main_Msg_OstExtractComplete,"提取完成！
+EML 文件已保存到:
+{0}","Extraction complete!
+EML files saved to:
+{0}"
+Main_Msg_OstExtractFailed,提取失败: {0},Extraction failed: {0}
+Main_Lbl_TestingConnection,正在测试连接...,Testing connection...
+Main_Lbl_ImapConnected,连接成功！发现 {0} 个文件夹,Connected! Found {0} folders
+Main_Msg_ImapConnected,"连接成功！
+发现 {0} 个文件夹","Connection successful!
+Found {0} folders"
+Main_Lbl_ImapConnectFailed,连接失败: {0},Connection failed: {0}
+Main_Msg_ImapConnectFailedDetail,连接失败: {0},Connection failed: {0}
+Main_Msg_EnterEmailPassword,请输入邮箱和密码！,Please enter email and password!
+Main_Lbl_RefreshingFolders,正在刷新文件夹列表...,Refreshing folder list...
+Main_Lbl_FoldersFound,发现 {0} 个文件夹,Found {0} folders
+Main_Lbl_ImapRefreshFailed,刷新失败: {0},Refresh failed: {0}
+Main_Msg_ImapRefreshFailed,刷新失败: {0},Refresh failed: {0}
+Main_Lbl_Fetching,正在收取邮件...,Fetching mails...
+Main_Lbl_ImapProgress,进度: {0}/{1},Progress: {0}/{1}
+Main_Lbl_FetchComplete,收取完成！,Fetch complete!
+Main_Msg_ImapFetchCompletePst,"收取完成！
+PST 文件已保存到:
+{0}","Fetch complete!
+PST file saved to:
+{0}"
+Main_Msg_ImapFetchFailed,收取失败: {0},Fetch failed: {0}
+Main_Msg_ImapFetchCompleteEml,"收取完成！
+EML 文件已保存到:
+{0}","Fetch complete!
+EML files saved to:
+{0}"
+Main_Msg_OstAccountsNotFound,"未找到 OST 账户。
+
+请确认：
+1. Outlook 是否已配置 Exchange 账户
+2. 是否使用了 Outlook Classic（不是 New Outlook）","No OST accounts found.
+
+Please confirm:
+1. Outlook has an Exchange account configured
+2. You are using Outlook Classic (not New Outlook)"
+Main_Msg_OstAccountListFailed,加载 OST 账户列表失败: {0},Failed to load OST account list: {0}
+Main_Msg_EnterO365Credentials,请输入 Tenant ID 和 Client ID！,Please enter Tenant ID and Client ID!
+Main_Lbl_OpeningBrowser,正在打开浏览器进行登录...,Opening browser for login...
+Main_Lbl_O365Connected,已连接！,Connected!
+Main_Lbl_LoginFailed,登录失败！,Login failed!
+Main_Msg_LoginFailedDetail,登录失败: {0},Login failed: {0}
+Main_Lbl_Disconnected,已断开连接,Disconnected
+Main_Msg_O365StatsFailed,无法获取统计数据，请确保已登录 O365,Unable to fetch statistics, please ensure you are logged into O365
+Main_Msg_O365StatsError,获取统计数据失败: {0},Failed to fetch statistics: {0}
+Main_Dialog_ExportContacts,导出联系人,Export Contacts
+Main_Msg_NoContacts,联系人列表为空,Contact list is empty
+Main_Msg_ContactsExported,"联系人导出成功！
+
+文件保存到:
+{0}
+
+共导出 {1} 个联系人","Contacts exported successfully!
+
+File saved to:
+{0}
+
+{1} contacts exported"
+Main_Msg_ContactsExportFailed,导出联系人失败: {0},Failed to export contacts: {0}
+Main_Dialog_ImportContacts,导入联系人,Import Contacts
+Main_Lbl_ParsingCsv,正在解析CSV文件，请稍候...,Parsing CSV file, please wait...
+Main_Msg_NoValidContactData,没有找到有效的联系人数据,No valid contact data found
+Main_Msg_ContactsImported,"联系人导入完成！
+
+文件:
+{0}
+
+共处理 {1} 条记录
+成功导入 {2} 个联系人","Contacts import complete!
+
+File:
+{0}
+
+{1} records processed
+{2} contacts imported"
+Main_Msg_ContactsImportFailed,导入联系人失败: {0},Failed to import contacts: {0}
+Main_Dialog_DownloadFoxmailTemplate,下载 Foxmail 联系人模板,Download Foxmail Contact Template
+Main_Msg_FoxmailTemplateSaved,"Foxmail 联系人模板已保存到:
+{0}","Foxmail contact template saved to:
+{0}"
+Main_Msg_TemplateDownloadFailed,下载模板失败: {0},Failed to download template: {0}
+Main_Dialog_DownloadO365Template,下载 O365 联系人模板,Download O365 Contact Template
+Main_Msg_O365TemplateSaved,"O365 联系人模板已保存到:
+{0}","O365 contact template saved to:
+{0}"
+Main_Dialog_SelectContactFile,选择联系人文件,Select Contact File
+Main_Msg_SelectFileFailed,选择文件失败: {0},Failed to select file: {0}
+Main_Msg_SelectSourceFile,请先选择要转换的源文件,Please select a source file to convert first
+Main_Msg_CsvEmpty,CSV 文件内容为空或只有表头,CSV file is empty or contains only the header
+Main_Dialog_SaveConvertedFile,保存转换后的文件,Save Converted File
+Main_Msg_ContactsConverted,"联系人转换成功！
+
+源文件: {0}
+输出文件: {1}","Contacts converted successfully!
+
+Source file: {0}
+Output file: {1}"
+Main_Msg_ConvertContactsFailed,转换失败: {0},Conversion failed: {0}
+Main_Dialog_SavePstFile,保存 PST 文件,Save PST File
+Main_Msg_SelectPathFailed,选择路径失败: {0},Failed to select path: {0}
+Main_Msg_SelectExportPath,请先选择导出文件保存路径,Please select an export file save path first
+Main_Lbl_AllMails,全部邮件,All Mails
+Main_Lbl_ExportingMails,正在导出邮件，请稍候...,Exporting mails, please wait...
+Main_Lbl_O365Exporting,正在导出... {0}/{1},Exporting... {0}/{1}
+Main_Lbl_O365ExportComplete,导出完成！成功: {0}, 失败: {1},Export complete! Success: {0}, Failed: {1}
+Main_Lbl_O365ExportFailed,导出失败,Export failed
+Main_Msg_O365ExportFailed,导出邮件失败: {0},Failed to export mails: {0}
+Main_Msg_SelectEmlFolder,请先选择 EML 目录！,Please select an EML folder first!
+Main_Msg_SelectPstFile,请先选择 PST 文件！,Please select a PST file first!
+Main_Msg_EmlFolderNotExist,EML 目录不存在！,EML folder does not exist!
+Main_Lbl_SyncingPst,正在同步 PST...,Syncing PST...
+Main_Lbl_SyncingEml,正在同步 EML...,Syncing EML...
+Main_Lbl_SyncProgress,同步进度: {0}%,Sync progress: {0}%
+Main_Lbl_SyncComplete,同步完成！,Sync complete!
+Main_Msg_SyncFailed,同步失败: {0},Sync failed: {0}
+Main_Msg_SettingsSaved,设置已保存！,Settings saved!
+Main_Dialog_SaveSettings,保存设置,Save Settings
+Main_Msg_SettingsSaveFailed,保存设置失败: {0},Failed to save settings: {0}
+Main_Dialog_About,关于,About
+Main_Dialog_ConnectionTest,连接测试,Connection Test
+Main_Dialog_DownloadSuccess,下载成功,Download Successful
+Main_Dialog_ImportSuccess,导入成功,Import Successful
+Main_Dialog_ExportSuccess,导出成功,Export Successful
+Main_Dialog_ConvertSuccess,转换成功,Convert Successful
+Main_Dialog_SubmitBug,提交Bug,Submit Bug
+Main_Msg_SubmitBug,"提交Bug功能正在开发中，请通过邮件联系我们：
+{0}","Submit Bug feature is under development, please contact us by email:
+{0}"
+Main_Msg_OpenUrlFailed,无法打开网址: {0},Failed to open URL: {0}
+Main_Lbl_NoSubject,(无主题),(No subject)
+Main_About_Version,版本: {0},Version: {0}
+Main_About_LicenseType,授权类型: {0},License Type: {0}
+Main_About_LicenseTrial,试用版,Trial
+Main_About_LicenseRegistered,注册版,Registered
+Main_About_LicenseUnregistered,未注册,Unregistered
+Main_About_RemainingDays,剩余: {0} 天,Remaining: {0} days
+Main_About_Features,"功能:
+- EML 转 PST 批量转换
+- EML 日期分割
+- PST/OST 文件提取
+- IMAP 邮件收取
+- Office 365 同步","Features:
+- EML to PST batch conversion
+- EML Date Split
+- PST/OST file extraction
+- IMAP mail fetch
+- Office 365 sync"
+Main_About_Contact,联系方式: {0},Contact: {0}
+Main_About_Copyright,© 2026 博铭信息（深圳）有限公司,© 2026 Booming Information (Shenzhen) Co., Ltd.
