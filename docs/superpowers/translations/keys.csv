@@ -179,3 +179,145 @@ Main_Table_Column_Status,状态,Status
 Main_Table_Column_Date,日期,Date
 Main_Table_Column_Size,大小,Size
 Main_Table_Column_Action,操作,Action
+
+Main_Menu_File,文件,File
+Main_Menu_SaveSettings,保存当前设置,Save Current Settings
+Main_Menu_Exit,退出,Exit
+Main_Menu_Preferences,首选项,Preferences
+Main_Menu_GeneralSettings,常规设置,General Settings
+Main_Menu_Help,帮助,Help
+Main_Menu_Activate,激活授权,Activate License
+Main_Menu_Register,注册软件,Register Software
+Main_Menu_Bug,提交Bug,Submit Bug
+Main_Menu_VisitWebsite,访问官网,Visit Website
+Main_Menu_About,关于,About
+Main_Tab_PstExtract,📁 PST 提取,📁 PST Extract
+Main_Tab_OstExtract,📂 OST 提取,📂 OST Extract
+Main_Tab_MailClassify,📤 邮件归类,📤 Mail Classify
+Main_Tab_ImapFetch,☁️ IMAP 收取,☁️ IMAP Fetch
+Main_Tab_ContactFormat,👥 联系人格式转换,👥 Contact Format Convert
+Main_Tab_O365Sync,🔄 O365 同步,🔄 O365 Sync
+Main_Tab_O365Data,📊 O365 数据,📊 O365 Data
+Main_Tab_MailManagement,📬 邮件管理,📬 Mail Management
+Main_Section_EmlToPst,EML 文件夹转 PST,EML Folder to PST
+Main_Section_EmlToPstDesc,支持分类规则，按发件人、年份、日期等条件自动归类,"Supports classification rules to auto-sort by sender, year, date, etc."
+Main_Section_EmlSplit,EML 按日期分割,EML Split by Date
+Main_Section_EmlSplitDesc,根据分割日期，将邮件分割到两个不同目录，同时显示发送和接收时间,"Split mails into two folders by the split date, showing sent/received times"
+Main_Section_PstExtract,PST 文件提取,PST File Extract
+Main_Section_PstExtractDesc,将 PST 文件中的邮件、联系人和日历提取出来,"Extract mails, contacts and calendar from PST file"
+Main_Section_OstExtract,OST 文件提取,OST File Extract
+Main_Section_OstExtractDesc,将 OST 离线数据文件转换为 EML 格式,Convert OST offline data file to EML format
+Main_Section_MailClassify,PST/OST 按年份归类,Classify PST/OST by Year
+Main_Section_MailClassifyDesc,在 PST/OST 文件内部按年份和发件人/收件人重新归类邮件,Re-classify mails inside PST/OST files by year and sender/recipient
+Main_Section_ImapFetch,IMAP 收取邮件,IMAP Fetch Mails
+Main_Section_ImapFetchDesc,从 IMAP 服务器收取邮件到本地 PST 或 EML 文件,Fetch mails from IMAP server to local PST or EML files
+Main_Section_ContactFormat,联系人格式转换,Contact Format Convert
+Main_Section_ContactFormatDesc,将联系人 CSV 文件转换为不同格式,Convert contact CSV file to different formats
+Main_Section_O365Sync,Office 365 同步,Office 365 Sync
+Main_Section_O365SyncDesc,将本地 PST 或 EML 文件同步到 Office 365 云端,Sync local PST or EML files to Office 365 cloud
+Main_Section_O365Data,Office 365 个人数据管理,Office 365 Personal Data Management
+Main_Section_O365DataDesc,查看邮件收发报表，管理联系人和邮件,View mail statistics and manage contacts and mails
+Main_Section_MailManagement,邮件导出管理,Mail Export Management
+Main_Section_MailManagementDesc,从 O365 邮箱导出邮件到 PST 文件，支持按时间范围筛选,Export mails from O365 mailbox to PST file with date range filter
+Main_Section_EmailDetails,邮件详情,Email Details
+Main_Section_ConversionDesc,转换说明:,Conversion Notes:
+Main_Group_DirClassifySettings,目录归类设置,Directory Classification Settings
+Main_Group_PstClassify,PST 文件归类,PST File Classify
+Main_Group_OstClassify,OST 文件归类（处理 Outlook 中已加载的 OST）,OST File Classify (Process OST loaded in Outlook)
+Main_Group_SyncPst,同步 PST 文件,Sync PST File
+Main_Group_SyncEml,同步 EML 目录,Sync EML Folder
+Main_Group_MailReport,邮件收发报表,Mail Statistics Report
+Main_Group_ContactManage,联系人管理,Contact Management
+Main_Group_ExportMail,导出邮件,Export Mails
+Main_Info_OutlookRequired,ℹ️ 提示：此功能需要安装 Microsoft Outlook 客户端。,ℹ️ Tip: This feature requires Microsoft Outlook to be installed.
+Main_Warning_CloseOutlook,⚠️ 提示：提取时请关闭 Outlook 客户端，否则会报错。,"⚠️ Tip: Please close Outlook before extraction, or it will fail."
+Main_Warning_LoginRequired,⚠️ 需要登录 Office 365,⚠️ Office 365 Login Required
+Main_Warning_Imap1000,⚠️ 注意：部分邮件服务器默认不支持一次收取超过1000封邮件，如需收取更多，请分批操作或联系邮箱管理员调整限制。,⚠️ Note: Some mail servers do not support fetching more than 1000 emails at a time by default. Fetch in batches or contact your email administrator to adjust the limit.
+Main_Field_ClassifyBy,归类方式,Classify By
+Main_Field_ByYear,按年份,By Year
+Main_Field_BySender,按发件人,By Sender
+Main_Field_ByMonth,按月份,By Month
+Main_Field_EstimatedCount,预估邮件,Estimated Count
+Main_Field_SplitDate,分割日期,Split Date
+Main_Field_PstFile,PST 文件,PST File
+Main_Field_EmlOutput,EML 输出,EML Output
+Main_Field_OstAccount,OST 账户,OST Account
+Main_Field_StartDate,开始日期,Start Date
+Main_Field_EndDate,结束日期,End Date
+Main_Field_ImapServer,IMAP 服务器,IMAP Server
+Main_Field_MaxEmails,最大邮件数,Max Emails
+Main_Field_All,全部,All
+Main_Field_SelectFolder,选择文件夹,Select Folder
+Main_Field_SelectConfig,选择配置,Select Config
+Main_Field_SourceFile,源文件:,Source File:
+Main_Field_ConversionType,转换类型:,Conversion Type:
+Main_Field_SelectOstAccount,选择 OST 账户,Select OST Account
+Main_Field_StartDateLabel,开始日期:,Start Date:
+Main_Field_EndDateLabel,结束日期:,End Date:
+Main_Field_OutputFile,输出文件:,Output File:
+Main_Field_ClassifyByYearMonth,按年月归类 (Inbox/年/月),Classify by Year/Month (Inbox/Year/Month)
+Main_Field_ExportAllMail,导出全部邮件,Export All Mails
+Main_Field_Sent24h,24小时发送,Sent 24h
+Main_Field_Received24h,24小时接收,Received 24h
+Main_Field_NewMail,新邮件,New Mail
+Main_Field_SentCount,发件总数,Total Sent
+Main_Field_ReceivedCount,收件总数,Total Received
+Main_Field_ContactCount,联系人数量,Contact Count
+Main_Field_SentMail,已发送邮件,Sent Mail
+Main_Field_EnableClassify,启用目录归类,Enable Directory Classification
+Main_Field_VersionPrefix,版本: ,Version: 
+Main_Btn_Scan,扫描,Scan
+Main_Btn_StartSplit,开始分割,Start Split
+Main_Btn_ExtractMail,提取邮件,Extract Mails
+Main_Btn_ExtractContacts,提取联系人,Extract Contacts
+Main_Btn_ExtractCalendar,提取日历,Extract Calendar
+Main_Btn_StartExtract,开始提取,Start Extract
+Main_Btn_StartClassify,开始归类,Start Classify
+Main_Btn_ManageConfig,管理配置,Manage Config
+Main_Btn_TestConnection,测试连接,Test Connection
+Main_Btn_FetchToPst,收取到 PST,Fetch to PST
+Main_Btn_FetchToEml,收取到 EML,Fetch to EML
+Main_Btn_DownloadFoxmail,下载 Foxmail 模板,Download Foxmail Template
+Main_Btn_DownloadO365,下载 O365 模板,Download O365 Template
+Main_Btn_ConnectO365,连接 O365,Connect O365
+Main_Btn_Disconnect,断开连接,Disconnect
+Main_Btn_SelectFile,选择文件,Select File
+Main_Btn_StartSync,开始同步,Start Sync
+Main_Btn_ExportContacts,导出联系人,Export Contacts
+Main_Btn_ExportCsv,导出 CSV,Export CSV
+Main_Btn_ImportContacts,导入联系人,Import Contacts
+Main_Btn_DownloadTemplate,下载模板,Download Template
+Main_Btn_ImportCsv,导入 CSV,Import CSV
+Main_Btn_ExportPst,导出 PST,Export PST
+Main_Btn_Clear,清空,Clear
+Main_Msg_ClickScanToEstimate,点击'扫描'按钮预估,Click 'Scan' to estimate
+Main_Msg_SplitTip,"提示: 日期之前 = 分割日期之前的邮件, 日期之后 = 分割日期及之后的邮件","Tip: Before = mails before the split date, After = mails on or after the split date"
+Main_Msg_UseSentTime,使用发送时间进行归类,Use sent time for classification
+Main_Msg_OstNote,注：OST 是 Exchange 账户的离线存储，会自动加载到 Outlook 中,"Note: OST is the offline storage for Exchange accounts, auto-loaded into Outlook"
+Main_Msg_LoginRequiredDesc,请在上一个 O365 同步标签页中连接您的账户，登录后可查看邮件收发报表、导入导出联系人和邮件。,"Please connect your account in the previous O365 Sync tab. After login, you can view mail statistics and import/export contacts and mails."
+Main_Msg_ExportContactsDesc,将联系人导出为 CSV 格式,Export contacts as CSV format
+Main_Msg_ImportContactsDesc,从 CSV 文件导入联系人到 Outlook,Import contacts from CSV file to Outlook
+Main_Msg_NoFileSelected,未选择文件,No file selected
+Main_Msg_NoFolderSelected,未选择目录,No folder selected
+Main_Msg_ContactFormatNote,"Foxmail格式: 姓名,昵称,电子邮箱,手机,电话,公司,部门,职务,地址,邮编,备注
+O365格式: DisplayName,FirstName,LastName,Email,Phone,CompanyName,Department","Foxmail format: Name,Nickname,Email,Mobile,Phone,Company,Department,Title,Address,ZipCode,Note
+O365 format: DisplayName,FirstName,LastName,Email,Phone,CompanyName,Department"
+Main_Cbo_ByYear,按年份 (2024),By Year (2024)
+Main_Cbo_BySender,按发件人 (sender@example.com),By Sender (sender@example.com)
+Main_Cbo_ByRecipient,按收件人 (recipient@example.com),By Recipient (recipient@example.com)
+Main_Cbo_BySenderShort,按发件人 (sender@...com),By Sender (sender@...com)
+Main_Cbo_ByRecipientShort,按收件人 (recipient@...com),By Recipient (recipient@...com)
+Main_Cbo_FoxmailToO365,Foxmail → O365 格式,Foxmail → O365 Format
+Main_Cbo_FoxmailToCn,Foxmail → 中文通用格式,Foxmail → Chinese Common Format
+Main_Cbo_CnToEn,中文格式 → 英文格式,Chinese Format → English Format
+Main_Cbo_EnToCn,英文格式 → 中文格式,English Format → Chinese Format
+Main_Cbo_Generic,通用格式 (UTF-8),Generic Format (UTF-8)
+Main_Table_Column_FileName,文件名,File Name
+Main_Table_Column_FolderType,文件夹类型,Folder Type
+Main_Table_Column_SentDate,发送时间,Sent Date
+Main_Table_Column_ReceivedDate,接收时间,Received Date
+Main_Table_Column_From,发件人,From
+Main_Table_Column_Subject,主题,Subject
+Main_Status_Trial,试用版,Trial
+Main_Log_Title,📋 运行日志,📋 Log Panel
+Main_Btn_SelectFolder,选择目录,Select Folder
