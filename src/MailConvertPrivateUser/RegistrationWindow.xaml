@@ -87,7 +87,7 @@
                             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="lblSoftwareName" Text="小铭邮件百宝箱（个人版）" FontWeight="Bold" Foreground="#0078D4" Margin="0,8"/>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" Text="{loc:Loc Reg_Field_Version}" Margin="0,8" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="lblSoftwareVersion" Text="1.0.0.5" Margin="0,8"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="lblSoftwareVersion" Text="1.2.0.0" Margin="0,8"/>
 
                             <TextBlock Grid.Row="2" Grid.Column="0" Text="{loc:Loc Reg_Field_Mac}" Margin="0,8" VerticalAlignment="Center"/>
                             <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">

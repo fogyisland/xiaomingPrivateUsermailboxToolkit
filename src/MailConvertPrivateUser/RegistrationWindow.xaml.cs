@@ -13,7 +13,7 @@ public partial class RegistrationWindow : Window
     private string _macAddress = "";
     private bool _isRegistered;
     private readonly string _softwareName = "xiaomingMailToolkitPrivate";
-    private readonly string _softwareVersion = "1.0.0.5";
+    private readonly string _softwareVersion = "1.2.0.0";
 
     public RegistrationWindow()
     {
