@@ -105,7 +105,7 @@
   <string name="Main_Btn_Registration">🔑 注册激活</string>
   <string name="Main_Btn_StartConvert">开始转换</string>
   <string name="Main_Btn_StopConvert">停止转换</string>
-  <string name="Main_Btn_Browse">Browse</string>
+  <string name="Main_Btn_Browse">浏览</string>
   <string name="Main_Btn_Convert">转换</string>
   <string name="Main_Btn_Cancel">取消</string>
   <string name="Main_Btn_AddAccount">添加账户</string>
