@@ -11,6 +11,7 @@ Common_Success,成功,Success
 Common_Warning,警告,Warning
 Common_Yes,是,Yes
 Common_No,否,No
+Common_Info,提示,Info
 Common_Close,关闭,Close
 Common_Name,名称,Name
 Common_Server,服务器,Server
@@ -68,7 +69,24 @@ Reg_Title,注册与激活,Registration and Activation
 Reg_Header,软件使用注册,Software Registration
 Reg_Status_Current,当前状态: ,Current Status:
 Reg_Status_Trial,试用版,Trial Version
+Reg_Status_Registered,注册版,Registered
+Reg_Status_NoNetworkAdapter,未检测到物理网卡,No network adapter detected
+Reg_Status_DetectFailed,检测失败,Detection failed
 Reg_Status_Detecting,检测中...,Detecting...
+Reg_Validation_NoUserName,请输入用户姓名,Please enter your name
+Reg_Validation_NoUserEmail,请输入用户邮箱,Please enter your email
+Reg_Validation_NoNetworkForRegister,未检测到物理网卡，无法注册,No network adapter detected, cannot register
+Reg_Validation_NoNetworkForActivate,未检测到物理网卡，无法激活,No network adapter detected, cannot activate
+Reg_Validation_NoSerial,请输入授权码,Please enter the license key
+Reg_Status_Submitting,正在提交注册信息...,Submitting registration...
+Reg_Status_Activating,正在激活订阅版...,Activating subscription...
+Reg_Status_RegSuccessWithDays,注册成功！剩余 {0} 天,Registration successful! {0} days remaining
+Reg_Status_ActivateSuccessWithDays,激活成功！剩余 {0} 天,Activation successful! {0} days remaining
+Reg_Status_RegException,注册异常: {0},Registration error: {0}
+Reg_Status_ActivateException,激活异常: {0},Activation error: {0}
+Reg_StatusMessage_UnregSuccessNote,已注销授权。,Unregistered successfully.
+Reg_StatusMessage_UnregAfterNote,注销后将需要重新注册才能使用软件。,After unregistering, you will need to re-register to use the software.
+Reg_Title_ConfirmUnreg,确认注销,Confirm Unregister
 Reg_RegPanelTitle,测试版授权信息,Test Version License Information
 Reg_Field_UserName,用户姓名:,User Name:
 Reg_Field_UserEmail,用户邮箱:,User Email:
