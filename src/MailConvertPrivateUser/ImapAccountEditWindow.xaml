@@ -1,0 +1,79 @@
+<Window x:Class="MailConvertPrivateUser.ImapAccountEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:MailConvertPrivateUser.Markup"
+        Title="{loc:Loc ImapEdit_Title}" Height="340" Width="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="#F5F7FA">
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#2563EB"/>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="#64748B"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#E2E8F0"/>
+        <SolidColorBrush x:Key="TextPrimary" Color="#1E293B"/>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="FieldLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,8,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{loc:Loc ImapEdit_Group}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,16"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{loc:Loc Common_Name}" Style="{StaticResource FieldLabel}"/>
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtName" Margin="0,0,0,12"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="{loc:Loc Common_Server}" Style="{StaticResource FieldLabel}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtServer" Margin="0,0,0,12"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="{loc:Loc Common_Port}" Style="{StaticResource FieldLabel}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtPort" Margin="0,0,0,12" Width="80" HorizontalAlignment="Left"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="{loc:Loc Common_Email}" Style="{StaticResource FieldLabel}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtEmail" Margin="0,0,0,12"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="{loc:Loc Common_Password}" Style="{StaticResource FieldLabel}"/>
+            <PasswordBox Grid.Row="4" Grid.Column="1" x:Name="txtPassword" Margin="0,0,0,12"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="{loc:Loc ImapEdit_Field_UseSsl}" Style="{StaticResource FieldLabel}"/>
+            <CheckBox Grid.Row="5" Grid.Column="1" x:Name="chkUseSsl" IsChecked="True" VerticalAlignment="Center"/>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="{loc:Loc Common_Save}" Click="BtnSave_Click" Width="100" Margin="0,0,12,0" Background="{StaticResource PrimaryBrush}" Foreground="White" Padding="12,8"/>
+            <Button Content="{loc:Loc Common_Cancel}" Click="BtnCancel_Click" Width="100" Background="{StaticResource SecondaryBrush}" Foreground="White" Padding="12,8"/>
+        </StackPanel>
+    </Grid>
+</Window>

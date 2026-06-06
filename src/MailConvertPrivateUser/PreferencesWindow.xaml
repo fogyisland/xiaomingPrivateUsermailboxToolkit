@@ -1,0 +1,302 @@
+<Window x:Class="MailConvertPrivateUser.PreferencesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:MailConvertPrivateUser.Markup"
+        Title="{loc:Loc Preferences_Title}" Height="540" Width="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F7FA">
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#2563EB"/>
+        <SolidColorBrush x:Key="PrimaryHoverBrush" Color="#1D4ED8"/>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="#64748B"/>
+        <SolidColorBrush x:Key="CardBackground" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#E2E8F0"/>
+        <SolidColorBrush x:Key="TextPrimary" Color="#1E293B"/>
+        <SolidColorBrush x:Key="TextSecondary" Color="#64748B"/>
+
+        <Style x:Key="ModernButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource PrimaryHoverBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource ModernButton}">
+            <Setter Property="Background" Value="{StaticResource SecondaryBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#475569"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="6">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                                <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TabControl">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style TargetType="TabItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextSecondary}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}" CornerRadius="6,6,0,0">
+                            <ContentPresenter x:Name="content" ContentSource="Header"
+                                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+                                <Setter TargetName="border" Property="Background" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FieldLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,8,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="White" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,0,1" Padding="12,10">
+            <TextBlock Text="{loc:Loc Preferences_Title}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}"/>
+        </Border>
+
+        <!-- Tab Content with ScrollViewer -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="12,12,12,0">
+            <TabControl>
+                <!-- Tab 1: EML转PST -->
+                <TabItem Header="{loc:Loc Preferences_Tab_EmlToPst}">
+                    <Border Background="White" CornerRadius="0,8,8,8" Padding="16">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc Preferences_Group_EmlToPst}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,12"/>
+                            <TextBlock Text="{loc:Loc Preferences_Group_EmlToPstDesc}" Foreground="{StaticResource TextSecondary}" FontSize="11" Margin="0,0,0,16"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="{loc:Loc Preferences_Field_EmlDir}" Style="{StaticResource FieldLabel}"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtDefaultEmlInput"/>
+                                <Button Grid.Row="0" Grid.Column="2" Content="{loc:Loc Common_Browse}" Style="{StaticResource SecondaryButton}" Click="BrowseDefaultEmlInput_Click" Margin="8,0,0,0" Padding="12,6"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="{loc:Loc Preferences_Field_PstOutput}" Style="{StaticResource FieldLabel}" Margin="0,12,8,0"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtDefaultPstOutput" Margin="0,12,0,0"/>
+                                <Button Grid.Row="1" Grid.Column="2" Content="{loc:Loc Common_Browse}" Style="{StaticResource SecondaryButton}" Click="BrowseDefaultPstOutput_Click" Margin="8,12,0,0" Padding="12,6"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+
+                <!-- Tab 2: EML日期分割 -->
+                <TabItem Header="{loc:Loc Preferences_Tab_EmlSplit}">
+                    <Border Background="White" CornerRadius="0,8,8,8" Padding="16">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc Preferences_Group_EmlSplit}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,12"/>
+                            <TextBlock Text="{loc:Loc Preferences_Group_EmlSplitDesc}" Foreground="{StaticResource TextSecondary}" FontSize="11" Margin="0,0,0,16"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="{loc:Loc Preferences_Field_EmlDir}" Style="{StaticResource FieldLabel}"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtDefaultSplitEml"/>
+                                <Button Grid.Row="0" Grid.Column="2" Content="{loc:Loc Common_Browse}" Style="{StaticResource SecondaryButton}" Click="BrowseDefaultSplitEml_Click" Margin="8,0,0,0" Padding="12,6"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="{loc:Loc Preferences_Field_DateBefore}" Style="{StaticResource FieldLabel}" Margin="0,12,8,0"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtDefaultSplitBefore" Margin="0,12,0,0"/>
+                                <Button Grid.Row="1" Grid.Column="2" Content="{loc:Loc Common_Browse}" Style="{StaticResource SecondaryButton}" Click="BrowseDefaultSplitBefore_Click" Margin="8,12,0,0" Padding="12,6"/>
+
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="{loc:Loc Preferences_Field_DateAfter}" Style="{StaticResource FieldLabel}" Margin="0,12,8,0"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDefaultSplitAfter" Margin="0,12,0,0"/>
+                                <Button Grid.Row="2" Grid.Column="2" Content="{loc:Loc Common_Browse}" Style="{StaticResource SecondaryButton}" Click="BrowseDefaultSplitAfter_Click" Margin="8,12,0,0" Padding="12,6"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+
+                <!-- Tab 3: IMAP 设置 -->
+                <TabItem Header="{loc:Loc Preferences_Tab_Imap}">
+                    <Border Background="White" CornerRadius="0,8,8,8" Padding="16">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="{loc:Loc Preferences_Group_Imap}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,12"/>
+
+                            <!-- 账户列表 -->
+                            <DataGrid Grid.Row="1" x:Name="dgImapAccounts" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single"
+                                      HeadersVisibility="Column" GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}"
+                                      RowHeight="28">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Name}" Binding="{Binding Name}" Width="120"/>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Server}" Binding="{Binding Server}" Width="*"/>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Port}" Binding="{Binding Port}" Width="70"/>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Email}" Binding="{Binding Email}" Width="180"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <!-- 操作按钮 -->
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,12,0,0">
+                                <Button Content="{loc:Loc Common_Add}" Style="{StaticResource SecondaryButton}" Click="AddImapAccount_Click" Padding="12,6" Margin="0,0,8,0"/>
+                                <Button Content="{loc:Loc Common_Edit}" Style="{StaticResource SecondaryButton}" Click="EditImapAccount_Click" Padding="12,6" Margin="0,0,8,0"/>
+                                <Button Content="{loc:Loc Common_Delete}" Style="{StaticResource SecondaryButton}" Click="DeleteImapAccount_Click" Padding="12,6" Margin="0,0,8,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <!-- Tab 4: Office 365 -->
+                <TabItem Header="{loc:Loc Preferences_Tab_O365}">
+                    <Border Background="White" CornerRadius="0,8,8,8" Padding="16">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="{loc:Loc Preferences_Group_O365}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,8"/>
+
+                            <TextBlock Grid.Row="1" Text="{loc:Loc Preferences_Group_O365Desc}" Foreground="{StaticResource TextSecondary}" FontSize="11" Margin="0,0,0,12"/>
+
+                            <!-- 账户列表 -->
+                            <DataGrid Grid.Row="2" x:Name="dgO365Accounts" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single"
+                                      HeadersVisibility="Column" GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}"
+                                      RowHeight="32">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Name}" Binding="{Binding Name}" Width="120"/>
+                                    <DataGridTextColumn Header="Tenant ID" Binding="{Binding TenantId}" Width="200"/>
+                                    <DataGridTextColumn Header="Client ID" Binding="{Binding ClientId}" Width="200"/>
+                                    <DataGridTextColumn Header="{loc:Loc Common_Username}" Binding="{Binding Username}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <!-- 操作按钮 -->
+                            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,12,0,0">
+                                <Button Content="{loc:Loc Common_Add}" Style="{StaticResource SecondaryButton}" Click="AddO365Account_Click" Padding="12,6" Margin="0,0,8,0"/>
+                                <Button Content="{loc:Loc Common_Edit}" Style="{StaticResource SecondaryButton}" Click="EditO365Account_Click" Padding="12,6" Margin="0,0,8,0"/>
+                                <Button Content="{loc:Loc Common_Delete}" Style="{StaticResource SecondaryButton}" Click="DeleteO365Account_Click" Padding="12,6" Margin="0,0,8,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <!-- Tab 5: Language -->
+                <TabItem Header="{loc:Loc Preferences_Tab_Language}">
+                    <Border Background="White" CornerRadius="0,8,8,8" Padding="16">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc Preferences_Language_Prompt}" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}" Margin="0,0,0,12"/>
+                            <ComboBox x:Name="cmbLanguage" Width="200" HorizontalAlignment="Left" DisplayMemberPath="DisplayName" SelectedValuePath="Code"/>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+            </TabControl>
+        </ScrollViewer>
+
+        <!-- Buttons -->
+        <Border Grid.Row="2" Background="White" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,1,0,0" Padding="12,10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="{loc:Loc Common_Save}" Style="{StaticResource ModernButton}" Click="BtnSave_Click" Width="100" Margin="0,0,12,0"/>
+                <Button Content="{loc:Loc Common_Cancel}" Style="{StaticResource SecondaryButton}" Click="BtnCancel_Click" Width="100"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

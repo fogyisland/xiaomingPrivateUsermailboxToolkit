@@ -1,7 +1,3 @@
-# Source code
-src/
-tests/
-
 # Build output
 publish/
 bin/

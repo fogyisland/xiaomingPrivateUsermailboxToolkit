@@ -39,6 +39,15 @@
 - **联系人同步**：将联系人同步到 O365
 - **日历同步**：将日历事件同步到 O365
 
+## 国际化 / 多语言支持
+
+支持中文（简体）和英文两种界面语言。
+
+- 切换路径：**常规设置 → Language** 标签页
+- 切换后需重启软件生效
+- 语言文件位置：`Language/zh-cn.xml` 和 `Language/en-us.xml`（与应用同级目录）
+- 翻译词条统一在 `docs/superpowers/translations/keys.csv` 维护
+
 ## 系统要求
 
 - Windows 10/11
@@ -139,6 +148,7 @@
 | O365 | Microsoft Graph SDK | Azure AD 和 Office 365 API |
 | 配置管理 | Microsoft.Extensions.Configuration | JSON 配置文件支持 |
 | 日志 | Serilog | 结构化日志记录 |
+| 本地化 | LocalizationManager + LocExtension | 中英文界面切换 |
 
 ### 项目结构
 
@@ -153,10 +163,17 @@ LiteEMLTOPST/
 │   │   ├── PstWriterService.cs      # PST 写入
 │   │   ├── EmailParserService.cs    # 邮件解析
 │   │   ├── ClassificationService.cs # 分类服务
-│   │   └── Office365SyncService.cs  # O365 同步
+│   │   ├── Office365SyncService.cs  # O365 同步
+│   │   └── LocalizationManager.cs   # i18n 词条查找
+│   ├── Markup/              # XAML 标记扩展
+│   │   └── LocExtension.cs          # {loc:Loc Key} 标记
+│   ├── Language/            # 翻译文件
+│   │   ├── zh-cn.xml                # 简体中文
+│   │   └── en-us.xml                # 英文
 │   ├── MainWindow.xaml      # 主窗口
 │   └── App.xaml             # 应用入口
 ├── tests/                   # 单元测试
+├── docs/superpowers/translations/keys.csv  # 翻译词条主表
 └── README.md
 ```
 

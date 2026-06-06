@@ -11,6 +11,7 @@ Common_Success,成功,Success
 Common_Warning,警告,Warning
 Common_Yes,是,Yes
 Common_No,否,No
+Common_Info,提示,Info
 Common_Close,关闭,Close
 Common_Name,名称,Name
 Common_Server,服务器,Server
@@ -54,11 +55,11 @@ O365Edit_GroupDesc,配置 Azure AD 应用凭证以连接 Microsoft Graph API,Con
 O365Edit_Field_Name,配置名称,Configuration Name
 O365Edit_Field_NameDesc,用于标识此配置的友好名称,A friendly name to identify this configuration
 O365Edit_Field_TenantId,Tenant ID,Tenant ID
-O365Edit_Field_TenantIdDesc,Azure AD 租户 ID，可在 Azure Portal - Azure Active Directory - 概述中查看,Azure AD tenant ID, found in Azure Portal > Azure Active Directory > Overview
+O365Edit_Field_TenantIdDesc,Azure AD 租户 ID，可在 Azure Portal - Azure Active Directory - 概述中查看,"Azure AD tenant ID, found in Azure Portal > Azure Active Directory > Overview"
 O365Edit_Field_ClientId,Client ID,Client ID
-O365Edit_Field_ClientIdDesc,应用程序（客户端）ID，注册 Azure AD 应用后获取,Application (client) ID, obtained after registering the Azure AD app
+O365Edit_Field_ClientIdDesc,应用程序（客户端）ID，注册 Azure AD 应用后获取,"Application (client) ID, obtained after registering the Azure AD app"
 O365Edit_Field_Username,用户名（可选）,Username (Optional)
-O365Edit_Field_UsernameDesc,连接时使用的用户名，通常为管理员邮箱,Username used for connection, usually the admin email
+O365Edit_Field_UsernameDesc,连接时使用的用户名，通常为管理员邮箱,"Username used for connection, usually the admin email"
 
 ContactMapping_Title,字段映射配置,Field Mapping Configuration
 ContactMapping_Header,请将源文件字段映射到目标字段：,Please map source file fields to target fields:
@@ -68,7 +69,24 @@ Reg_Title,注册与激活,Registration and Activation
 Reg_Header,软件使用注册,Software Registration
 Reg_Status_Current,当前状态: ,Current Status:
 Reg_Status_Trial,试用版,Trial Version
+Reg_Status_Registered,注册版,Registered
+Reg_Status_NoNetworkAdapter,未检测到物理网卡,No network adapter detected
+Reg_Status_DetectFailed,检测失败,Detection failed
 Reg_Status_Detecting,检测中...,Detecting...
+Reg_Validation_NoUserName,请输入用户姓名,Please enter your name
+Reg_Validation_NoUserEmail,请输入用户邮箱,Please enter your email
+Reg_Validation_NoNetworkForRegister,未检测到物理网卡，无法注册,"No network adapter detected, cannot register"
+Reg_Validation_NoNetworkForActivate,未检测到物理网卡，无法激活,"No network adapter detected, cannot activate"
+Reg_Validation_NoSerial,请输入授权码,Please enter the license key
+Reg_Status_Submitting,正在提交注册信息...,Submitting registration...
+Reg_Status_Activating,正在激活订阅版...,Activating subscription...
+Reg_Status_RegSuccessWithDays,注册成功！剩余 {0} 天,Registration successful! {0} days remaining
+Reg_Status_ActivateSuccessWithDays,激活成功！剩余 {0} 天,Activation successful! {0} days remaining
+Reg_Status_RegException,注册异常: {0},Registration error: {0}
+Reg_Status_ActivateException,激活异常: {0},Activation error: {0}
+Reg_StatusMessage_UnregSuccessNote,已注销授权。,Unregistered successfully.
+Reg_StatusMessage_UnregAfterNote,注销后将需要重新注册才能使用软件。,"After unregistering, you will need to re-register to use the software."
+Reg_Title_ConfirmUnreg,确认注销,Confirm Unregister
 Reg_RegPanelTitle,测试版授权信息,Test Version License Information
 Reg_Field_UserName,用户姓名:,User Name:
 Reg_Field_UserEmail,用户邮箱:,User Email:
@@ -77,7 +95,7 @@ Reg_Field_RegDate,注册日期:,Registration Date:
 Reg_Field_ExpireDate,到期日期:,Expiration Date:
 Reg_Field_Mac,MAC地址:,MAC Address:
 Reg_RegFormTitle,注册（获得30天试用）,Register (Get 30-Day Trial)
-Reg_RegFormHint,提示：注册后可获得30天免费试用，到期后需激活订阅才能继续使用,Note: Registration grants a 30-day free trial. After expiration, activate a subscription to continue.
+Reg_RegFormHint,提示：注册后可获得30天免费试用，到期后需激活订阅才能继续使用,"Note: Registration grants a 30-day free trial. After expiration, activate a subscription to continue."
 Reg_Field_SoftwareName,软件名称:,Software Name:
 Reg_Field_Version,版本:,Version:
 Reg_Field_ShowMac,显示,Show
@@ -89,7 +107,7 @@ Reg_Btn_Register,注册（试用）,Register (Trial)
 Reg_Btn_Unregister,注销授权,Unregister
 Reg_Btn_Close,关闭,Close
 Reg_StatusMessage_InvalidEmail,请输入有效的邮箱地址,Please enter a valid email address
-Reg_StatusMessage_MacNotFound,无法获取 MAC 地址，请重试,Unable to retrieve MAC address, please retry
+Reg_StatusMessage_MacNotFound,无法获取 MAC 地址，请重试,"Unable to retrieve MAC address, please retry"
 Reg_StatusMessage_RegFailed,注册失败: {0},Registration failed: {0}
 Reg_StatusMessage_RegSuccess,注册成功！,Registration successful!
 Reg_StatusMessage_Activated,激活成功！,Activation successful!
@@ -111,7 +129,7 @@ Main_Btn_Preferences,⚙️ 偏好设置,⚙️ Preferences
 Main_Btn_Registration,🔑 注册激活,🔑 Registration
 Main_Btn_StartConvert,开始转换,Start Convert
 Main_Btn_StopConvert,停止转换,Stop Convert
-Main_Btn_Browse,Browse,Browse
+Main_Btn_Browse,浏览,Browse
 Main_Btn_Convert,转换,Convert
 Main_Btn_Cancel,取消,Cancel
 Main_Btn_AddAccount,添加账户,Add Account
@@ -161,3 +179,371 @@ Main_Table_Column_Status,状态,Status
 Main_Table_Column_Date,日期,Date
 Main_Table_Column_Size,大小,Size
 Main_Table_Column_Action,操作,Action
+
+Main_Menu_File,文件,File
+Main_Menu_SaveSettings,保存当前设置,Save Current Settings
+Main_Menu_Exit,退出,Exit
+Main_Menu_Preferences,首选项,Preferences
+Main_Menu_GeneralSettings,常规设置,General Settings
+Main_Menu_Help,帮助,Help
+Main_Menu_Activate,激活授权,Activate License
+Main_Menu_Register,注册软件,Register Software
+Main_Menu_Bug,提交Bug,Submit Bug
+Main_Menu_VisitWebsite,访问官网,Visit Website
+Main_Menu_About,关于,About
+Main_Tab_PstExtract,📁 PST 提取,📁 PST Extract
+Main_Tab_OstExtract,📂 OST 提取,📂 OST Extract
+Main_Tab_MailClassify,📤 邮件归类,📤 Mail Classify
+Main_Tab_ImapFetch,☁️ IMAP 收取,☁️ IMAP Fetch
+Main_Tab_ContactFormat,👥 联系人格式转换,👥 Contact Format Convert
+Main_Tab_O365Sync,🔄 O365 同步,🔄 O365 Sync
+Main_Tab_O365Data,📊 O365 数据,📊 O365 Data
+Main_Tab_MailManagement,📬 邮件管理,📬 Mail Management
+Main_Section_EmlToPst,EML 文件夹转 PST,EML Folder to PST
+Main_Section_EmlToPstDesc,支持分类规则，按发件人、年份、日期等条件自动归类,"Supports classification rules to auto-sort by sender, year, date, etc."
+Main_Section_EmlSplit,EML 按日期分割,EML Split by Date
+Main_Section_EmlSplitDesc,根据分割日期，将邮件分割到两个不同目录，同时显示发送和接收时间,"Split mails into two folders by the split date, showing sent/received times"
+Main_Section_PstExtract,PST 文件提取,PST File Extract
+Main_Section_PstExtractDesc,将 PST 文件中的邮件、联系人和日历提取出来,"Extract mails, contacts and calendar from PST file"
+Main_Section_OstExtract,OST 文件提取,OST File Extract
+Main_Section_OstExtractDesc,将 OST 离线数据文件转换为 EML 格式,Convert OST offline data file to EML format
+Main_Section_MailClassify,PST/OST 按年份归类,Classify PST/OST by Year
+Main_Section_MailClassifyDesc,在 PST/OST 文件内部按年份和发件人/收件人重新归类邮件,Re-classify mails inside PST/OST files by year and sender/recipient
+Main_Section_ImapFetch,IMAP 收取邮件,IMAP Fetch Mails
+Main_Section_ImapFetchDesc,从 IMAP 服务器收取邮件到本地 PST 或 EML 文件,Fetch mails from IMAP server to local PST or EML files
+Main_Section_ContactFormat,联系人格式转换,Contact Format Convert
+Main_Section_ContactFormatDesc,将联系人 CSV 文件转换为不同格式,Convert contact CSV file to different formats
+Main_Section_O365Sync,Office 365 同步,Office 365 Sync
+Main_Section_O365SyncDesc,将本地 PST 或 EML 文件同步到 Office 365 云端,Sync local PST or EML files to Office 365 cloud
+Main_Section_O365Data,Office 365 个人数据管理,Office 365 Personal Data Management
+Main_Section_O365DataDesc,查看邮件收发报表，管理联系人和邮件,View mail statistics and manage contacts and mails
+Main_Section_MailManagement,邮件导出管理,Mail Export Management
+Main_Section_MailManagementDesc,从 O365 邮箱导出邮件到 PST 文件，支持按时间范围筛选,Export mails from O365 mailbox to PST file with date range filter
+Main_Section_EmailDetails,邮件详情,Email Details
+Main_Section_ConversionDesc,转换说明:,Conversion Notes:
+Main_Group_DirClassifySettings,目录归类设置,Directory Classification Settings
+Main_Group_PstClassify,PST 文件归类,PST File Classify
+Main_Group_OstClassify,OST 文件归类（处理 Outlook 中已加载的 OST）,OST File Classify (Process OST loaded in Outlook)
+Main_Group_SyncPst,同步 PST 文件,Sync PST File
+Main_Group_SyncEml,同步 EML 目录,Sync EML Folder
+Main_Group_MailReport,邮件收发报表,Mail Statistics Report
+Main_Group_ContactManage,联系人管理,Contact Management
+Main_Group_ExportMail,导出邮件,Export Mails
+Main_Info_OutlookRequired,ℹ️ 提示：此功能需要安装 Microsoft Outlook 客户端。,ℹ️ Tip: This feature requires Microsoft Outlook to be installed.
+Main_Warning_CloseOutlook,⚠️ 提示：提取时请关闭 Outlook 客户端，否则会报错。,"⚠️ Tip: Please close Outlook before extraction, or it will fail."
+Main_Warning_LoginRequired,⚠️ 需要登录 Office 365,⚠️ Office 365 Login Required
+Main_Warning_Imap1000,⚠️ 注意：部分邮件服务器默认不支持一次收取超过1000封邮件，如需收取更多，请分批操作或联系邮箱管理员调整限制。,⚠️ Note: Some mail servers do not support fetching more than 1000 emails at a time by default. Fetch in batches or contact your email administrator to adjust the limit.
+Main_Field_ClassifyBy,归类方式,Classify By
+Main_Field_ByYear,按年份,By Year
+Main_Field_BySender,按发件人,By Sender
+Main_Field_ByMonth,按月份,By Month
+Main_Field_EstimatedCount,预估邮件,Estimated Count
+Main_Field_SplitDate,分割日期,Split Date
+Main_Field_PstFile,PST 文件,PST File
+Main_Field_EmlOutput,EML 输出,EML Output
+Main_Field_OstAccount,OST 账户,OST Account
+Main_Field_StartDate,开始日期,Start Date
+Main_Field_EndDate,结束日期,End Date
+Main_Field_ImapServer,IMAP 服务器,IMAP Server
+Main_Field_MaxEmails,最大邮件数,Max Emails
+Main_Field_All,全部,All
+Main_Field_SelectFolder,选择文件夹,Select Folder
+Main_Field_SelectConfig,选择配置,Select Config
+Main_Field_SourceFile,源文件:,Source File:
+Main_Field_ConversionType,转换类型:,Conversion Type:
+Main_Field_SelectOstAccount,选择 OST 账户,Select OST Account
+Main_Field_StartDateLabel,开始日期:,Start Date:
+Main_Field_EndDateLabel,结束日期:,End Date:
+Main_Field_OutputFile,输出文件:,Output File:
+Main_Field_ClassifyByYearMonth,按年月归类 (Inbox/年/月),Classify by Year/Month (Inbox/Year/Month)
+Main_Field_ExportAllMail,导出全部邮件,Export All Mails
+Main_Field_Sent24h,24小时发送,Sent 24h
+Main_Field_Received24h,24小时接收,Received 24h
+Main_Field_NewMail,新邮件,New Mail
+Main_Field_SentCount,发件总数,Total Sent
+Main_Field_ReceivedCount,收件总数,Total Received
+Main_Field_ContactCount,联系人数量,Contact Count
+Main_Field_SentMail,已发送邮件,Sent Mail
+Main_Field_EnableClassify,启用目录归类,Enable Directory Classification
+Main_Field_VersionPrefix,版本: ,Version: 
+Main_Btn_Scan,扫描,Scan
+Main_Btn_StartSplit,开始分割,Start Split
+Main_Btn_ExtractMail,提取邮件,Extract Mails
+Main_Btn_ExtractContacts,提取联系人,Extract Contacts
+Main_Btn_ExtractCalendar,提取日历,Extract Calendar
+Main_Btn_StartExtract,开始提取,Start Extract
+Main_Btn_StartClassify,开始归类,Start Classify
+Main_Btn_ManageConfig,管理配置,Manage Config
+Main_Btn_TestConnection,测试连接,Test Connection
+Main_Btn_FetchToPst,收取到 PST,Fetch to PST
+Main_Btn_FetchToEml,收取到 EML,Fetch to EML
+Main_Btn_DownloadFoxmail,下载 Foxmail 模板,Download Foxmail Template
+Main_Btn_DownloadO365,下载 O365 模板,Download O365 Template
+Main_Btn_ConnectO365,连接 O365,Connect O365
+Main_Btn_Disconnect,断开连接,Disconnect
+Main_Btn_SelectFile,选择文件,Select File
+Main_Btn_StartSync,开始同步,Start Sync
+Main_Btn_ExportContacts,导出联系人,Export Contacts
+Main_Btn_ExportCsv,导出 CSV,Export CSV
+Main_Btn_ImportContacts,导入联系人,Import Contacts
+Main_Btn_DownloadTemplate,下载模板,Download Template
+Main_Btn_ImportCsv,导入 CSV,Import CSV
+Main_Btn_ExportPst,导出 PST,Export PST
+Main_Btn_Clear,清空,Clear
+Main_Msg_ClickScanToEstimate,点击'扫描'按钮预估,Click 'Scan' to estimate
+Main_Msg_SplitTip,"提示: 日期之前 = 分割日期之前的邮件, 日期之后 = 分割日期及之后的邮件","Tip: Before = mails before the split date, After = mails on or after the split date"
+Main_Msg_UseSentTime,使用发送时间进行归类,Use sent time for classification
+Main_Msg_OstNote,注：OST 是 Exchange 账户的离线存储，会自动加载到 Outlook 中,"Note: OST is the offline storage for Exchange accounts, auto-loaded into Outlook"
+Main_Msg_LoginRequiredDesc,请在上一个 O365 同步标签页中连接您的账户，登录后可查看邮件收发报表、导入导出联系人和邮件。,"Please connect your account in the previous O365 Sync tab. After login, you can view mail statistics and import/export contacts and mails."
+Main_Msg_ExportContactsDesc,将联系人导出为 CSV 格式,Export contacts as CSV format
+Main_Msg_ImportContactsDesc,从 CSV 文件导入联系人到 Outlook,Import contacts from CSV file to Outlook
+Main_Msg_NoFileSelected,未选择文件,No file selected
+Main_Msg_NoFolderSelected,未选择目录,No folder selected
+Main_Msg_ContactFormatNote,"Foxmail格式: 姓名,昵称,电子邮箱,手机,电话,公司,部门,职务,地址,邮编,备注
+O365格式: DisplayName,FirstName,LastName,Email,Phone,CompanyName,Department","Foxmail format: Name,Nickname,Email,Mobile,Phone,Company,Department,Title,Address,ZipCode,Note
+O365 format: DisplayName,FirstName,LastName,Email,Phone,CompanyName,Department"
+Main_Cbo_ByYear,按年份 (2024),By Year (2024)
+Main_Cbo_BySender,按发件人 (sender@example.com),By Sender (sender@example.com)
+Main_Cbo_ByRecipient,按收件人 (recipient@example.com),By Recipient (recipient@example.com)
+Main_Cbo_BySenderShort,按发件人 (sender@...com),By Sender (sender@...com)
+Main_Cbo_ByRecipientShort,按收件人 (recipient@...com),By Recipient (recipient@...com)
+Main_Cbo_FoxmailToO365,Foxmail → O365 格式,Foxmail → O365 Format
+Main_Cbo_FoxmailToCn,Foxmail → 中文通用格式,Foxmail → Chinese Common Format
+Main_Cbo_CnToEn,中文格式 → 英文格式,Chinese Format → English Format
+Main_Cbo_EnToCn,英文格式 → 中文格式,English Format → Chinese Format
+Main_Cbo_Generic,通用格式 (UTF-8),Generic Format (UTF-8)
+Main_Table_Column_FileName,文件名,File Name
+Main_Table_Column_FolderType,文件夹类型,Folder Type
+Main_Table_Column_SentDate,发送时间,Sent Date
+Main_Table_Column_ReceivedDate,接收时间,Received Date
+Main_Table_Column_From,发件人,From
+Main_Table_Column_Subject,主题,Subject
+Main_Status_Trial,试用版,Trial
+Main_Log_Title,📋 运行日志,📋 Log Panel
+Main_Btn_SelectFolder,选择目录,Select Folder
+Common_Complete,完成,Complete
+Main_Lbl_Subscription,订阅版,Subscription
+Main_Lbl_SubscriptionRemaining,订阅版 | 剩余 {0} 天,Subscription | {0} days remaining
+Main_Lbl_TrialRemaining,试用版 | 剩余 {0} 天,Trial | {0} days remaining
+Main_Msg_DirNotExist,目录不存在,Directory does not exist
+Main_Lbl_ScanResult,共 {0} 封邮件（将归类 {1} 封，跳过 {2} 封已归类）,"{0} mails total (will classify {1}, skip {2} already classified)"
+Main_Lbl_ScanFailed,扫描失败: {0},Scan failed: {0}
+Main_Lbl_ConvertFailed,转换失败,Conversion failed
+Main_Lbl_ScanningEml,正在扫描 EML 文件...,Scanning EML files...
+Main_Msg_EmlInputDirNotExist,EML 输入目录不存在！,EML input directory does not exist!
+Main_Lbl_FoundEmlFiles,找到 {0} 个 EML 文件，开始转换...,Found {0} EML files, starting conversion...
+Main_Lbl_Converting,正在转换: {0}/{1},Converting: {0}/{1}
+Main_Lbl_Processing,处理中: {0}/{1},Processing: {0}/{1}
+Main_Lbl_ConvertCompleteLabel,完成！已处理 {0} 个文件。,Complete! Processed {0} files.
+Main_Lbl_ConvertCompleteStatus,转换完成: 成功 {0}, 失败 {1},Conversion complete: {0} success, {1} failed
+Main_Msg_ConvertDone,"转换完成！
+成功: {0}, 失败: {1}
+PST 文件已保存到:
+{2}","Conversion complete!
+{0} success, {1} failed
+PST file saved to:
+{2}"
+Main_Msg_SelectSplitDate,请选择分割日期！,Please select a split date!
+Main_Lbl_FoundEmlFilesSplit,找到 {0} 个 EML 文件，开始分割...,Found {0} EML files, starting split...
+Main_FolderType_Sent,已发送,Sent
+Main_FolderType_Inbox,收件箱/其他,Inbox/Other
+Main_Lbl_SplitProgress,处理中: {0}/{1} (日期之前: {2}, 日期之后: {3}),Processing: {0}/{1} (before: {2}, after: {3})
+Main_Lbl_SplitComplete,完成！日期之前: {0} 封, 日期之后: {1} 封,Complete! Before: {0} mails, After: {1} mails
+Main_Msg_SplitComplete,"分割完成！
+
+日期之前: {0} 封邮件
+保存到: {1}
+
+日期之后: {2} 封邮件
+保存到: {3}","Split complete!
+
+Before: {0} mails
+Saved to: {1}
+
+After: {2} mails
+Saved to: {3}"
+Main_Msg_SplitFailed,分割失败: {0},Split failed: {0}
+Main_Dialog_SelectPstFile,选择 PST 文件,Select PST File
+Main_Msg_PstNotExist,PST 文件不存在！,PST file does not exist!
+Main_Lbl_Extracting,正在提取...,Extracting...
+Main_Lbl_Extracted,已提取: {0} 封邮件,Extracted: {0} mails
+Main_Lbl_ExtractComplete,提取完成！,Extraction complete!
+Main_Msg_PstExtractComplete,"提取完成！
+EML 文件已保存到:
+{0}","Extraction complete!
+EML files saved to:
+{0}"
+Main_Msg_PstExtractFailed,提取失败: {0},Extraction failed: {0}
+Main_Lbl_ExtractingContacts,正在提取联系人...,Extracting contacts...
+Main_Lbl_ContactsComplete,提取完成,Extraction complete
+Main_Msg_ContactsExtracted,提取到 {0} 个联系人。,{0} contacts extracted.
+Main_Msg_OperationFailed,失败: {0},Failed: {0}
+Main_Lbl_ExtractingCalendar,正在提取日历...,Extracting calendar...
+Main_Msg_CalendarExtracted,提取到 {0} 个日历事件。,{0} calendar events extracted.
+Main_Lbl_ScanningPst,正在扫描 PST 文件夹...,Scanning PST folders...
+Main_Lbl_ClassifyComplete,归类完成！,Classification complete!
+Main_Msg_PstClassifyComplete,PST 文件归类完成！,PST file classification complete!
+Main_Msg_ClassifyFailed,归类失败: {0},Classification failed: {0}
+Main_Lbl_Classifying,归类中: {0}/{1},Classifying: {0}/{1}
+Main_Msg_OstAutoLoaded,OST 文件已经自动加载到 Outlook 中，无需选择文件。,OST files are auto-loaded in Outlook, no need to select a file.
+Main_Msg_SelectOstAccount,请先选择一个 OST 账户！,Please select an OST account first!
+Main_Lbl_ScanningOst,正在扫描 OST 文件夹...,Scanning OST folders...
+Main_Msg_OstClassifyComplete,OST 文件归类完成！,OST file classification complete!
+Main_Msg_SelectOutputDir,请选择输出目录！,Please select an output directory!
+Main_Lbl_CountingMails,正在统计邮件数量...,Counting mails...
+Main_Lbl_OstExtractedTotal,已提取: {0}/{1} 封邮件,Extracted: {0}/{1} mails
+Main_Lbl_OstExtracted,已提取: {0} 封邮件,Extracted: {0} mails
+Main_Msg_OstExtractComplete,"提取完成！
+EML 文件已保存到:
+{0}","Extraction complete!
+EML files saved to:
+{0}"
+Main_Msg_OstExtractFailed,提取失败: {0},Extraction failed: {0}
+Main_Lbl_TestingConnection,正在测试连接...,Testing connection...
+Main_Lbl_ImapConnected,连接成功！发现 {0} 个文件夹,Connected! Found {0} folders
+Main_Msg_ImapConnected,"连接成功！
+发现 {0} 个文件夹","Connection successful!
+Found {0} folders"
+Main_Lbl_ImapConnectFailed,连接失败: {0},Connection failed: {0}
+Main_Msg_ImapConnectFailedDetail,连接失败: {0},Connection failed: {0}
+Main_Msg_EnterEmailPassword,请输入邮箱和密码！,Please enter email and password!
+Main_Lbl_RefreshingFolders,正在刷新文件夹列表...,Refreshing folder list...
+Main_Lbl_FoldersFound,发现 {0} 个文件夹,Found {0} folders
+Main_Lbl_ImapRefreshFailed,刷新失败: {0},Refresh failed: {0}
+Main_Msg_ImapRefreshFailed,刷新失败: {0},Refresh failed: {0}
+Main_Lbl_Fetching,正在收取邮件...,Fetching mails...
+Main_Lbl_ImapProgress,进度: {0}/{1},Progress: {0}/{1}
+Main_Lbl_FetchComplete,收取完成！,Fetch complete!
+Main_Msg_ImapFetchCompletePst,"收取完成！
+PST 文件已保存到:
+{0}","Fetch complete!
+PST file saved to:
+{0}"
+Main_Msg_ImapFetchFailed,收取失败: {0},Fetch failed: {0}
+Main_Msg_ImapFetchCompleteEml,"收取完成！
+EML 文件已保存到:
+{0}","Fetch complete!
+EML files saved to:
+{0}"
+Main_Msg_OstAccountsNotFound,"未找到 OST 账户。
+
+请确认：
+1. Outlook 是否已配置 Exchange 账户
+2. 是否使用了 Outlook Classic（不是 New Outlook）","No OST accounts found.
+
+Please confirm:
+1. Outlook has an Exchange account configured
+2. You are using Outlook Classic (not New Outlook)"
+Main_Msg_OstAccountListFailed,加载 OST 账户列表失败: {0},Failed to load OST account list: {0}
+Main_Msg_EnterO365Credentials,请输入 Tenant ID 和 Client ID！,Please enter Tenant ID and Client ID!
+Main_Lbl_OpeningBrowser,正在打开浏览器进行登录...,Opening browser for login...
+Main_Lbl_O365Connected,已连接！,Connected!
+Main_Lbl_LoginFailed,登录失败！,Login failed!
+Main_Msg_LoginFailedDetail,登录失败: {0},Login failed: {0}
+Main_Lbl_Disconnected,已断开连接,Disconnected
+Main_Msg_O365StatsFailed,无法获取统计数据，请确保已登录 O365,Unable to fetch statistics, please ensure you are logged into O365
+Main_Msg_O365StatsError,获取统计数据失败: {0},Failed to fetch statistics: {0}
+Main_Dialog_ExportContacts,导出联系人,Export Contacts
+Main_Msg_NoContacts,联系人列表为空,Contact list is empty
+Main_Msg_ContactsExported,"联系人导出成功！
+
+文件保存到:
+{0}
+
+共导出 {1} 个联系人","Contacts exported successfully!
+
+File saved to:
+{0}
+
+{1} contacts exported"
+Main_Msg_ContactsExportFailed,导出联系人失败: {0},Failed to export contacts: {0}
+Main_Dialog_ImportContacts,导入联系人,Import Contacts
+Main_Lbl_ParsingCsv,正在解析CSV文件，请稍候...,Parsing CSV file, please wait...
+Main_Msg_NoValidContactData,没有找到有效的联系人数据,No valid contact data found
+Main_Msg_ContactsImported,"联系人导入完成！
+
+文件:
+{0}
+
+共处理 {1} 条记录
+成功导入 {2} 个联系人","Contacts import complete!
+
+File:
+{0}
+
+{1} records processed
+{2} contacts imported"
+Main_Msg_ContactsImportFailed,导入联系人失败: {0},Failed to import contacts: {0}
+Main_Dialog_DownloadFoxmailTemplate,下载 Foxmail 联系人模板,Download Foxmail Contact Template
+Main_Msg_FoxmailTemplateSaved,"Foxmail 联系人模板已保存到:
+{0}","Foxmail contact template saved to:
+{0}"
+Main_Msg_TemplateDownloadFailed,下载模板失败: {0},Failed to download template: {0}
+Main_Dialog_DownloadO365Template,下载 O365 联系人模板,Download O365 Contact Template
+Main_Msg_O365TemplateSaved,"O365 联系人模板已保存到:
+{0}","O365 contact template saved to:
+{0}"
+Main_Dialog_SelectContactFile,选择联系人文件,Select Contact File
+Main_Msg_SelectFileFailed,选择文件失败: {0},Failed to select file: {0}
+Main_Msg_SelectSourceFile,请先选择要转换的源文件,Please select a source file to convert first
+Main_Msg_CsvEmpty,CSV 文件内容为空或只有表头,CSV file is empty or contains only the header
+Main_Dialog_SaveConvertedFile,保存转换后的文件,Save Converted File
+Main_Msg_ContactsConverted,"联系人转换成功！
+
+源文件: {0}
+输出文件: {1}","Contacts converted successfully!
+
+Source file: {0}
+Output file: {1}"
+Main_Msg_ConvertContactsFailed,转换失败: {0},Conversion failed: {0}
+Main_Dialog_SavePstFile,保存 PST 文件,Save PST File
+Main_Msg_SelectPathFailed,选择路径失败: {0},Failed to select path: {0}
+Main_Msg_SelectExportPath,请先选择导出文件保存路径,Please select an export file save path first
+Main_Lbl_AllMails,全部邮件,All Mails
+Main_Lbl_ExportingMails,正在导出邮件，请稍候...,Exporting mails, please wait...
+Main_Lbl_O365Exporting,正在导出... {0}/{1},Exporting... {0}/{1}
+Main_Lbl_O365ExportComplete,导出完成！成功: {0}, 失败: {1},Export complete! Success: {0}, Failed: {1}
+Main_Lbl_O365ExportFailed,导出失败,Export failed
+Main_Msg_O365ExportFailed,导出邮件失败: {0},Failed to export mails: {0}
+Main_Msg_SelectEmlFolder,请先选择 EML 目录！,Please select an EML folder first!
+Main_Msg_SelectPstFile,请先选择 PST 文件！,Please select a PST file first!
+Main_Msg_EmlFolderNotExist,EML 目录不存在！,EML folder does not exist!
+Main_Lbl_SyncingPst,正在同步 PST...,Syncing PST...
+Main_Lbl_SyncingEml,正在同步 EML...,Syncing EML...
+Main_Lbl_SyncProgress,同步进度: {0}%,Sync progress: {0}%
+Main_Lbl_SyncComplete,同步完成！,Sync complete!
+Main_Msg_SyncFailed,同步失败: {0},Sync failed: {0}
+Main_Msg_SettingsSaved,设置已保存！,Settings saved!
+Main_Dialog_SaveSettings,保存设置,Save Settings
+Main_Msg_SettingsSaveFailed,保存设置失败: {0},Failed to save settings: {0}
+Main_Dialog_About,关于,About
+Main_Dialog_ConnectionTest,连接测试,Connection Test
+Main_Dialog_DownloadSuccess,下载成功,Download Successful
+Main_Dialog_ImportSuccess,导入成功,Import Successful
+Main_Dialog_ExportSuccess,导出成功,Export Successful
+Main_Dialog_ConvertSuccess,转换成功,Convert Successful
+Main_Dialog_SubmitBug,提交Bug,Submit Bug
+Main_Msg_SubmitBug,"提交Bug功能正在开发中，请通过邮件联系我们：
+{0}","Submit Bug feature is under development, please contact us by email:
+{0}"
+Main_Msg_OpenUrlFailed,无法打开网址: {0},Failed to open URL: {0}
+Main_Lbl_NoSubject,(无主题),(No subject)
+Main_About_Version,版本: {0},Version: {0}
+Main_About_LicenseType,授权类型: {0},License Type: {0}
+Main_About_LicenseTrial,试用版,Trial
+Main_About_LicenseRegistered,注册版,Registered
+Main_About_LicenseUnregistered,未注册,Unregistered
+Main_About_RemainingDays,剩余: {0} 天,Remaining: {0} days
+Main_About_Features,"功能:
+- EML 转 PST 批量转换
+- EML 日期分割
+- PST/OST 文件提取
+- IMAP 邮件收取
+- Office 365 同步","Features:
+- EML to PST batch conversion
+- EML Date Split
+- PST/OST file extraction
+- IMAP mail fetch
+- Office 365 sync"
+Main_About_Contact,联系方式: {0},Contact: {0}
+Main_About_Copyright,© 2026 博铭信息（深圳）有限公司,© 2026 Booming Information (Shenzhen) Co., Ltd.
