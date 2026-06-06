@@ -75,8 +75,8 @@ Reg_Status_DetectFailed,检测失败,Detection failed
 Reg_Status_Detecting,检测中...,Detecting...
 Reg_Validation_NoUserName,请输入用户姓名,Please enter your name
 Reg_Validation_NoUserEmail,请输入用户邮箱,Please enter your email
-Reg_Validation_NoNetworkForRegister,未检测到物理网卡，无法注册,No network adapter detected, cannot register
-Reg_Validation_NoNetworkForActivate,未检测到物理网卡，无法激活,No network adapter detected, cannot activate
+Reg_Validation_NoNetworkForRegister,未检测到物理网卡，无法注册,"No network adapter detected, cannot register"
+Reg_Validation_NoNetworkForActivate,未检测到物理网卡，无法激活,"No network adapter detected, cannot activate"
 Reg_Validation_NoSerial,请输入授权码,Please enter the license key
 Reg_Status_Submitting,正在提交注册信息...,Submitting registration...
 Reg_Status_Activating,正在激活订阅版...,Activating subscription...
@@ -85,7 +85,7 @@ Reg_Status_ActivateSuccessWithDays,激活成功！剩余 {0} 天,Activation succ
 Reg_Status_RegException,注册异常: {0},Registration error: {0}
 Reg_Status_ActivateException,激活异常: {0},Activation error: {0}
 Reg_StatusMessage_UnregSuccessNote,已注销授权。,Unregistered successfully.
-Reg_StatusMessage_UnregAfterNote,注销后将需要重新注册才能使用软件。,After unregistering, you will need to re-register to use the software.
+Reg_StatusMessage_UnregAfterNote,注销后将需要重新注册才能使用软件。,"After unregistering, you will need to re-register to use the software."
 Reg_Title_ConfirmUnreg,确认注销,Confirm Unregister
 Reg_RegPanelTitle,测试版授权信息,Test Version License Information
 Reg_Field_UserName,用户姓名:,User Name:
